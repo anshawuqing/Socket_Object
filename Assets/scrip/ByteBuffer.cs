@@ -9,7 +9,7 @@ using System.Text;
 /// <summary>
 /// 
 /// </summary>
-namespace Net
+namespace  YWSNet
 {
 
     /// <summary>
