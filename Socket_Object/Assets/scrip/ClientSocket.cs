@@ -32,7 +32,7 @@ namespace YWSNet
         /// </summary>
         /// <param name="ip">ip 地址</param>
         /// <param name="port"> 端口号</param>
-        public  void ConnectSever(string ip, int port)
+        public  void ConnectServer(string ip, int port)
         {
             IPAddress mIp = IPAddress.Parse(ip);
             IPEndPoint ip_end_point = new IPEndPoint(mIp,port);
