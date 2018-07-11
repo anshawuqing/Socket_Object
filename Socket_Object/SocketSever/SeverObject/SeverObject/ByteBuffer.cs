@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.IO;
 using System;
 using System.Text;
@@ -15,7 +14,7 @@ namespace  YWSNet
     /// <summary>
     ///  
     /// </summary>
-    public class ByteBuffer
+    public class ByteBuffer 
     {
         MemoryStream stream = null;
         BinaryWriter writer = null;
