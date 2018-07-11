@@ -12,7 +12,7 @@ namespace  YWSNet
 {
 
     /// <summary>
-    ///  
+    ///  Socket  通信的基类脚本  
     /// </summary>
     public class ByteBuffer 
     {
@@ -32,6 +32,11 @@ namespace  YWSNet
         public ByteBuffer(byte[] data)
         {
             if (data != null)
+            {
+                stream = new MemoryStream(data);
+                reader = new BinaryReader(stream);
+            }
+            else
             {
                 stream = new MemoryStream();
                 writer = new BinaryWriter(stream);

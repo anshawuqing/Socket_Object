@@ -31,7 +31,7 @@ namespace SeverObject
             severSocket.Bind(ip_end_point);
             // 设置最长的 连接 请求队列长度
             severSocket.Listen(10);
-            Console.WriteLine("启动监听成功", severSocket.LocalEndPoint.ToString());
+            Console.WriteLine("启动监听{0}成功", severSocket.LocalEndPoint.ToString());
             //在新线程 中监听客户端的 链接
             Thread thred = new Thread(ClientConnectListen);
             thred.Start();
@@ -97,13 +97,14 @@ namespace SeverObject
                     //数据长度
                     int len = buff.ReadShort();
                     //数据内容
+                   
                     string data = buff.ReadString();
                     Console.WriteLine("数据内容：{0}", data);
 
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    Console.WriteLine(ex.Message+"客户端接受数据异常");
                     mClientSocket.Shutdown(SocketShutdown.Both);
                     mClientSocket.Close();
                     break;

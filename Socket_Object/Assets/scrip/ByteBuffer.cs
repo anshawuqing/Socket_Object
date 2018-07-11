@@ -34,9 +34,15 @@ namespace  YWSNet
         {
             if (data != null)
             {
+                stream = new MemoryStream(data);
+                reader = new BinaryReader(stream);  
+            }
+            else
+            {
                 stream = new MemoryStream();
                 writer = new BinaryWriter(stream);
             }
+            
         }
 
         /// <summary>
